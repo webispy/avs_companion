@@ -1,0 +1,45 @@
+<%- include header.ejs %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">AVS Registration Information</div>
+  <div class="panel-body">
+
+    <form class="form-horizontal" id="form_avs_info" method="post" action="/avs/info">
+      <div class="form-group">
+        <label class="control-label col-xs-3">Client ID</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text name="client_id" value="<%= settings.config.avs.client_id %>"></input>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-3">Client Secret</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text name="client_secret" value="<%= settings.config.avs.client_secret %>"></input>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-3">Device Type ID</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text name="device_type_id" value="<%= settings.config.avs.device_type_id %>"></input>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-3">Redirect URL</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text readonly value="<%= settings.config.avs.redirect_url %>"></input>
+        </div>
+      </div>
+    </form>
+
+    <div class="btn-group pull-right" role="group">
+      <button onclick="$('#form_avs_info').submit();" class="btn btn-default">Save</button>
+    </div>
+
+	<div class="row"><div class="col-xs-12">
+		Go to <a href="https://developer.amazon.com/avs/home.html#/avs/home">Amazon Developer Console - Alexa</a>
+	</div></div>
+
+  </div>
+</div>
+
+<%- include footer.ejs %>

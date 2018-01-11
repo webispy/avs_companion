@@ -1,0 +1,41 @@
+<%- include header.ejs %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Alexa Voice Service</div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-xs-3">Token</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text readonly
+                 value="<%= settings.data.avs.token %>"></input>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-3">Refresh Token</label>
+        <div class="col-xs-9">
+          <input class="form-control" type=text readonly
+                 value="<%= settings.data.avs.refresh %>"></input>
+        </div>
+      </div>
+      <div class="btn-group pull-right" role="group">
+        <a href="/avs/login" class="btn btn-default">Get token</a>
+        <a href="/avs/refresh" class="btn btn-default"
+           <%
+             if (settings.data.avs.token == 'none'
+                 || settings.data.avs.token == null) {
+           %> disabled <%
+             }
+           %>>Refresh token</a>
+      </div>
+    </form>
+
+    <div class="row">
+      <div class="col-xs-12"><hr/></div>
+    </div>
+
+  </div>
+</div>
+
+<%- include footer.ejs %>
+

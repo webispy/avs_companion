@@ -1,0 +1,11 @@
+{
+  "general": {
+    "title": "MyAVS"
+  },
+  "avs": {
+    "client_id": "your-client-id",
+    "client_secret": "your-client-secret",
+    "device_type_id": "AVSTest",
+    "redirect_url": "/avs/callback"
+  }
+}
