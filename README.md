@@ -9,7 +9,9 @@
 
 ## Installation
 
-### Install web server
+You can install the web server manually or use the Heroku service.
+
+### Install to your server manually
 
 Download and Install
 
@@ -26,7 +28,13 @@ $ node bin/www
 listening on port 3000
 ```
 
+### Use Heroku service
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+You need to input CLIENT_ID, CLIENT_SECRET and PRODUCT_ID environment variables to deploy to Heroku. The values can be obtained through the Alexa Voice Service registration below.
+
+If deployed to the Heroku, it could be a security risk because someone else who knows the URL can access it. So, when you are done testing, please stop the service in the Heroku dashboard.
 
 ### Register Alexa Voice Service
 
@@ -59,10 +67,10 @@ Click the **CREATE PRODUCT** Button
 
 - Platform Information: Web
 - Copy **Client ID** and **Client secret** to notepad
-- Allowed return URLs: https://localhost:3000/avs/callback
+- Allowed return URLs: http://localhost:3000/avs/callback or http://{your-heroku-app}.herokuapp.com/avs/callabck
 - click **FINISH** Button
 
-### Setup AVS Companion site
+### Setup AVS Companion site (local server only. Heroku not work)
 
 Open web browser with http://localhost:3000/setup
 - Client ID: paste **Client ID** from notepad
@@ -73,7 +81,7 @@ Open web browser with http://localhost:3000/setup
 
 ## Get token !!
 
-Open web browser with http://localhost:3000/setup
+Open web browser with http://localhost:3000/ or http://{your-heroku-app}.herokuapp.com/
 - Click **Get token** button
 - Login with your alexa account
 - Allow your product
