@@ -26,4 +26,8 @@ const settings = {
   }
 }
 
+settings.config.avs.client_id = process.env.CLIENT_ID || settings.config.avs.client_id
+settings.config.avs.client_secret = process.env.CLIENT_SECRET || settings.config.avs.client_secret
+settings.config.avs.device_type_id = process.env.PRODUCT_ID || settings.config.avs.device_type_id
+
 module.exports = settings

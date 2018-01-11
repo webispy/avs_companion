@@ -6,5 +6,19 @@
 		"avs",
 		"alexa",
 		"oauth2"
-	]
+	],
+	"env": {
+		"CLIENT_ID": {
+			"description": "AVS Client ID",
+			"value": ""
+		},
+		"CLIENT_SECRET": {
+			"description": "AVS Client secret",
+			"value": ""
+		},
+		"PRODUCT_ID": {
+			"description": "AVS Product ID",
+			"value": "AVSTest"
+		}
+	}
 }
