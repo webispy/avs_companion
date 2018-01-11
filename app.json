@@ -1,0 +1,10 @@
+{
+	"name": "AVSCompanion",
+	"description": "Alexa Voice Service companion site example",
+	"repository": "https://github.com/webispy/avs_companion",
+	"keywords": [
+		"avs",
+		"alexa",
+		"oauth2"
+	]
+}

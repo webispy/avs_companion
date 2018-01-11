@@ -26,6 +26,8 @@ $ node bin/www
 listening on port 3000
 ```
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ### Register Alexa Voice Service
 
 https://developer.amazon.com/avs/home.html#/avs/home
